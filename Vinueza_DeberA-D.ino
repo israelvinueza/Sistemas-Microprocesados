@@ -15,7 +15,7 @@ void loop() {
  if( Serial.available()>0)
   {
     lectura=Serial.readString().toInt();
-    Serial.print(lectura);
+    Serial.println(lectura);
   }
  dato=(analogRead(A0)*5.0)/(1023.0);
  dato = analogRead(0);
