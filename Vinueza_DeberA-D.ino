@@ -6,7 +6,6 @@
 int dato;
 int lectura;
 #define led A3
-int ult;
 void setup() {
 Serial.begin(9600);
 pinMode(led,OUTPUT);
@@ -22,11 +21,11 @@ void loop() {
  Serial.println(String(analogRead(0)));
  delay(200);
  
-if(ult>dato){
+if(lectura>dato){
   digitalWrite(led, HIGH);
-   Serial.println("Mayor valor del pin Análogo Digital");
-   delay(100);
+   delay(500);
 }else{
-  digitalWrite(led, HIGH);  
+  digitalWrite(led, LOW); 
+    delay(200);
 }
 }
